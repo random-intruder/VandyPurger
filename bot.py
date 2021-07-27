@@ -150,6 +150,7 @@ async def daily_purge():
 
             remaining = time_to_sleep()
             await purge_channel.send(f"Going to sleep for {remaining} seconds.")
+            await purge_channel.send(f"https://media.discordapp.net/attachments/868546595279470632/869604793654595604/unknown.png")
 
             purged[i] = 1  # set purge flag for specific channel
         else:
