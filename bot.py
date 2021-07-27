@@ -150,7 +150,8 @@ async def daily_purge():
 
             remaining = time_to_sleep()
             await purge_channel.send(f"Going to sleep for {remaining} seconds.")
-
+            if purge_channel.id == 868546595279470632:
+                await purge_channel.send(f"https://media.discordapp.net/attachments/868546595279470632/869604793654595604/unknown.png") #sends milf!Byleth in '25
             purged[i] = 1  # set purge flag for specific channel
         else:
             print("Purge snoozed for 30 minutes")
@@ -160,6 +161,8 @@ async def daily_purge():
         remaining = time_to_sleep()
         print(f"Going to sleep for {remaining} seconds.")
         await asyncio.sleep(remaining)
+        
+    
 
 
 @daily_purge.before_loop
